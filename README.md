@@ -5,7 +5,7 @@ Based on `debian:buster` image. Builds a copy of `gst-omx` and integrates it int
 Example usage:
 
 ```
-docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi-docker:latest \
+docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi:latest \
     gst-launch-1.0 rtspsrc location="rtsp://address-of-source" latency=0 !\
     rtph264depay ! h264parse ! omxh264dec !\
     omxh264enc target-bitrate=500000 control-rate=1 ! video/x-h264, profile=baseline !\
@@ -15,7 +15,7 @@ docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi-docker:latest \
 Embed some overlays on the decoded H264 stream:
 
 ```
-docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi-docker:latest \
+docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi:latest \
     gst-launch-1.0 rtspsrc location="rtsp://address-of-source" latency=0 !\
     rtph264depay ! h264parse ! omxh264dec ! videorate !\
     textoverlay text="Front" valignment=top halignment=left font-desc="Sans, 16" !\
