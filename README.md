@@ -23,3 +23,5 @@ docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi:latest \
     omxh264enc target-bitrate=500000 control-rate=1 ! video/x-h264, profile=baseline !\
     rtph264pay name=pay0 config-interval=1 pt=96 ! udpsink host=ip-of-sink port=8004
 ```
+
+The pre-built docker image can be found here: https://hub.docker.com/r/mmastrac/gst-omx-rpi/
