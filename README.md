@@ -24,4 +24,10 @@ docker run -it --rm --device=/dev/vchiq mmastrac/gst-omx-rpi:latest \
     rtph264pay name=pay0 config-interval=1 pt=96 ! udpsink host=ip-of-sink port=8004
 ```
 
+You might need to add the following to your Pi's boot configuration:
+
+```
+gpu_mem = 128
+```
+
 The pre-built docker image can be found here: https://hub.docker.com/r/mmastrac/gst-omx-rpi/
