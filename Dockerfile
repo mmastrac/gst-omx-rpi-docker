@@ -29,4 +29,4 @@ RUN make
 
 # Manual install
 RUN make install
-RUN cp ./omx/.libs/libgstomx.so /usr/lib/arm-linux-gnueabi/gstreamer-1.0/
+RUN cp ./omx/.libs/libgstomx.so /usr/lib/arm-linux-gnueabihf/gstreamer-1.0/
