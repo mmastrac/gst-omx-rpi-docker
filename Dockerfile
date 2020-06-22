@@ -22,7 +22,7 @@ RUN ldconfig
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -qq install gstreamer1.0-plugins-*
 RUN DEBIAN_FRONTEND=noninteractive apt-get -y -qq install libgstreamer-plugins-base1.0-dev
 
-ARG GST_OMX_VERSION=1.14.2
+ARG GST_OMX_VERSION=1.15.90
 RUN echo "Building gst-omx (${GST_OMX_VERSION})"
 
 RUN curl -o gst-omx.tar.xz https://gstreamer.freedesktop.org/src/gst-omx/gst-omx-${GST_OMX_VERSION}.tar.xz
